@@ -1,129 +1,134 @@
+<!-- @format -->
+
 <!DOCTYPE html>
 <html lang="en">
-	<head>
-		<meta charset="UTF-8" />
-		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-		<script src="moment.min.js"></script>
-		<link rel="stylesheet" href="style.css" />
-		<script defer src="app.js"></script>
-		<title>Hermes News</title>
-	</head>
-	<body>
-		<header>
-			<h1>Hermes News</h1>
-			<p>A Currents API Service</p>
-		</header>
-		<main>
-			<div class="detailedCardOutter">
-				<div class="detailedCardInner">
-					<a href="#">
-						<img class="xImage xCard" src="jpegs/xIcon2.png" />
-					</a>
-					<iframe
-						class="webpage"
-						src="https://www.npr.org/?refresh=true"
-						allow="true"
-						importance="high"
-					></iframe>
-				</div>
-			</div>
-			<div class="photoOutter">
-				<div class="photoInner">
-					<a href="#">
-						<img class="xImage xPhoto" src="jpegs/xIcon2.png" />
-					</a>
-					<img class="bigPhoto" src="jpegs/xIcon2.png" />
-				</div>
-			</div>
-			<div class="loading">
-				Loading...
-			</div>
-			
-		</main>
-		<aside>
-			<div class="currentSearch aside">
-				<p class="currentSearchP title">Current Search</p>
-				<div class="currentSearchBox">Latest news</div>
-			</div>
-			<div class="searchForm aside">
-				<p class="title searchOptions">Search Options</p>
-				<label for="keywords" class="keywordLabel subtitle">Keywords</label>
-				<input
-					class="line"
-					type="text"
-					id="keywords"
-					placeholder="enter search keywords"
-				/>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.0.0/animate.min.css"
+    />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="moment.min.js"></script>
+    <link rel="stylesheet" href="style.css" />
+    <script defer src="app.js"></script>
+    <title>Hermes News</title>
+  </head>
+  <body>
+    <header>
+      <h1>Hermes News</h1>
+      <p>A Currents API Service</p>
+    </header>
+    <main>
+      <div class="detailedCardOutter">
+        <div class="detailedCardInner">
+          <a href="#">
+            <img class="xImage xCard" src="jpegs/xIcon2.png" />
+          </a>
+          <iframe
+            class="webpage"
+            src="https://www.npr.org/?refresh=true"
+            allow="true"
+            importance="high"
+          ></iframe>
+        </div>
+      </div>
+      <div class="photoOutter">
+        <div class="photoInner">
+          <a href="#">
+            <img class="xImage xPhoto" src="jpegs/xIcon2.png" />
+          </a>
+          <img class="bigPhoto" src="jpegs/xIcon2.png" />
+        </div>
+      </div>
+      <div class="loading">
+        Loading...
+      </div>
+    </main>
+    <aside>
+      <div class="currentSearch aside">
+        <p class="currentSearchP title">Current Search</p>
+        <div class="currentSearchBox">Latest news</div>
+      </div>
+      <div class="searchForm aside">
+        <p class="title searchOptions">Search Options</p>
+        <label for="keywords" class="keywordLabel subtitle">Keywords</label>
+        <input
+          class="line"
+          type="text"
+          id="keywords"
+          placeholder="enter search keywords"
+        />
 
-				<label for="selectCategory" class="categoryLabel subtitle">
-					Category
-				</label>
-				<select class="line" id="selectCategory" name="category">
-					<option value="all">All categories</option>
-				</select>
-				<label for="selectLanguage" class="languageLabel subtitle">
-					Language
-				</label>
-				<select class="line" id="selectLanguage" name="language">
-					
-				</select>
-				<label for="selectRegion" class="regionLabel subtitle">Country</label>
-				<select class="line" id="selectRegion" name="region">
-					<option value="all">All categories</option>
-				</select>
-				<div class="domainBox">
-					<div class="radio radioOne">
-						<input
-							class="domainIncludeRadial subtitle"
-							type="radio"
-							id="domainInclude"
-							name='domainRadio'
-							value='yesDomain'
-							checked
-						/>
-						<label for="domainInclude" class="domainIncludeLabel subtitle">
-							Include
-						</label>
-					</div>
-					<div class="radio radioTwo">
-						<input
-							class="domainExcludeRadial subtitle"
-							type="radio"
-							id="domainExclude"
-							name='domainRadio'
-							value='noDomain'
-							
-						/>
-						<label for="domainExclude" class="domainExcludeLabel subtitle">
-							Exclude
-						</label>
-					</div>
-					<label for="enterDomain" class="domainLabel subtitle">Domain<br>(without http://www.)</label>
-					<input
-					class="line"
-					type="text"
-					id="enterDomain"
-					placeholder="enter a domain"
-				/>
-				</div>
-				<div class="dateRange aside">
-					<p class="dateRangeP line">Date Range</p>
-					<label for="from" class="line">From</label>
-					<input id="from" type="date" class="line" />
-					<label for="to" class="line">To</label>
-					<input id="to" type="date" class="line" />
-				</div>
-				<button class="searchButton line">Search</button>
-			</div>
-			<div class="settings aside">
-				<button id="dark" class="line">Dark Mode</button>
-			</div>
-		</aside>
-		<footer>
-			<button id="previous" class="footButton inactive">Previous</button>
-			<button id="refresh" class="footButton">Refresh</button>
-			<button id="next" class="footButton">Next</button>
-		</footer>
-	</body>
+        <label for="selectCategory" class="categoryLabel subtitle">
+          Category
+        </label>
+        <select class="line" id="selectCategory" name="category">
+          <option value="all">All categories</option>
+        </select>
+        <label for="selectLanguage" class="languageLabel subtitle">
+          Language
+        </label>
+        <select class="line" id="selectLanguage" name="language"> </select>
+        <label for="selectRegion" class="regionLabel subtitle">Country</label>
+        <select class="line" id="selectRegion" name="region">
+          <option value="all">All categories</option>
+        </select>
+        <div class="domainBox">
+          <div class="radio radioOne">
+            <input
+              class="domainIncludeRadial subtitle"
+              type="radio"
+              id="domainInclude"
+              name="domainRadio"
+              value="yesDomain"
+              checked
+            />
+            <label for="domainInclude" class="domainIncludeLabel subtitle">
+              Include
+            </label>
+          </div>
+          <div class="radio radioTwo">
+            <input
+              class="domainExcludeRadial subtitle"
+              type="radio"
+              id="domainExclude"
+              name="domainRadio"
+              value="noDomain"
+            />
+            <label for="domainExclude" class="domainExcludeLabel subtitle">
+              Exclude
+            </label>
+          </div>
+          <label for="enterDomain" class="domainLabel subtitle"
+            >Domain<br />(without http://www.)</label
+          >
+          <input
+            class="line"
+            type="text"
+            id="enterDomain"
+            placeholder="enter a domain"
+          />
+        </div>
+        <div class="dateRange aside">
+          <p class="dateRangeP line">Date Range</p>
+          <label for="from" class="line">From</label>
+          <input id="from" type="date" class="line" />
+          <label for="to" class="line">To</label>
+          <input id="to" type="date" class="line" />
+        </div>
+        <button class="searchButton line">Search</button>
+      </div>
+      <div class="settings aside">
+        <button id="dark" class="line">Dark Mode</button>
+      </div>
+    </aside>
+    <footer>
+      <button id="previous" class="footButton inactive">Previous</button>
+      <button id="refresh" class="footButton">Refresh</button>
+      <button id="next" class="footButton">Next</button>
+      <button id="sideBar" class="footButton">Side Panel</button>
+    </footer>
+  </body>
 </html>
