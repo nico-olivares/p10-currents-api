@@ -574,12 +574,16 @@ function darkModeFunc(dark) {
 $("#sideBar").on("click", function (event) {
   const a = $("aside");
   if ($("aside").hasClass("hide")) {
-    a.removeClass("hide animate__animated animate__backOutRight");
-    a.addClass("animate__animated animate__backInRight");
+    a.removeClass("hide animate__backOutRight");
+    a.addClass("animate__backInRight");
     $("body").css("grid-template-columns", "auto auto");
   } else {
-    a.addClass("hide animate__animated animate__backOutRight");
-    a.removeClass("animate__animated animate__backInright");
+    a.addClass("animate__backOutRight");
+    a.removeClass("animate__backInRight");
     $("body").css("grid-template-columns", "auto");
+    setTimeout(hideIt, 800);
+    function hideIt() {
+      a.addClass("hide");
+    }
   }
 });
