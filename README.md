@@ -8,3 +8,5 @@ By clicking on the photo it can be enlarged and by clicking on the title the use
 The app auto refreshes.
 There are several filters that can be applied.
 A "Light Mode" (bright) can also be selected.
+
+The site is deployed at https://news-olivares.netlify.app/ 
